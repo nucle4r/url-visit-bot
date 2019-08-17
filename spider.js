@@ -71,7 +71,7 @@ async function main() {
 
         await console.log('Opening Page...');
     
-        await page.goto('https://link-to.net/37538/streamlive');
+        await page.goto('http://stfly.io/YoutubeStream');
 
         await console.log('Page Opened Waiting for 18 Seconds...');
 
