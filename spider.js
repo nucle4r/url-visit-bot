@@ -57,6 +57,8 @@ async function main() {
         '--use-mock-keychain',
       ],});
 
+    await console.log(`Launching Browser with Proxy: ${serverUrl}`);
+
     let page = await browser.newPage();
 
         await page.setUserAgent(userAgent.user[Math.floor(Math.random() * 1000)]); 
@@ -67,13 +69,17 @@ async function main() {
         deviceScaleFactor: 1,
         });
 
-        await console.log(`Launching Browser with Proxy: ${serverUrl}`);
+        await console.log('Opening Page...');
     
         await page.goto('https://webhook.site/39713b01-1325-4303-9bfd-b6e652ec2326');
 
+        await console.log('Page Opened Waiting for 18 Seconds...');
+
         await page.waitFor(18000);
 
-        await browser.close(); 
+        await browser.close();
+
+        await console.log('Browser Closed! Relaunching...');
 
     } catch(e)
         {
