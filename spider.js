@@ -95,8 +95,8 @@ async function main() {
           continue;
       }
     }
-    }
   
     await console.log('End of Proxy Urls');
+  }
   
 main();  
