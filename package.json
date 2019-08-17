@@ -1,0 +1,14 @@
+{
+  "name": "url-reacher",
+  "version": "1.0.0",
+  "description": "Reaches URLs",
+  "main": "spider.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Singh Priyanshu",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^1.19.0"
+  }
+}
