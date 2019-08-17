@@ -58,7 +58,7 @@ async function main() {
       ],});
 
     await console.log(`Launching Browser with Proxy: ${serverUrl}`);
-
+    try {
     let page = await browser.newPage();
 
         await page.setUserAgent(userAgent.user[Math.floor(Math.random() * 1000)]); 
@@ -77,20 +77,26 @@ async function main() {
 
         await page.waitFor(18000);
 
-        await browser.close();
-
         await console.log('Browser Closed! Relaunching...');
-
-    } catch(e)
-        {
+    
+    } catch(e) {
             //console.log(e)
-            await console.log('Some Error in Connection! Continuing...')
-            await browser.close();
+            await console.log('Some Error in Proxy Connection! Continuing...')            
             continue;
-        } 
+        }
+     finally {
+
+        await browser.close();
+  
+      }
+  } catch(e) {
+          //console.log(e)
+          await console.log('Some Error in Browser! Continuing...')            
+          continue;
+      }
+    }
     }
   
     await console.log('End of Proxy Urls');
   
-}
 main();  
