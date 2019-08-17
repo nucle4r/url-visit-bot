@@ -85,6 +85,7 @@ async function main() {
         {
             //console.log(e)
             await console.log('Some Error in Connection! Continuing...')
+            await browser.close();
             continue;
         } 
     }
