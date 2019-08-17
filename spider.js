@@ -71,7 +71,7 @@ async function main() {
 
         await console.log('Opening Page...');
     
-        await page.goto('https://webhook.site/39713b01-1325-4303-9bfd-b6e652ec2326');
+        await page.goto('https://link-to.net/37538/streamlive');
 
         await console.log('Page Opened Waiting for 18 Seconds...');
 
@@ -98,5 +98,5 @@ async function main() {
   
     await console.log('End of Proxy Urls');
   }
-  
+
 main();  
