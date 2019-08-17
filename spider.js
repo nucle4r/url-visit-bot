@@ -77,7 +77,8 @@ async function main() {
 
     } catch(e)
         {
-            await console.log('Some Error in Connection! Continuing...')
+          console.log(e)
+            // await console.log('Some Error in Connection! Continuing...')
             continue;
         } 
     }
